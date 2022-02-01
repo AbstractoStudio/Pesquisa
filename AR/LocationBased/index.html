@@ -15,6 +15,14 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
+    <a-assets>
+      <a-asset-item id="abs-obj" src="../../_assets/AbstractoLogo.obj"></a-asset-item>
+      <a-asset-item id="abs-mtl" src="../../_assets/AbstractoLogo-Material.png"></a-asset-item>
+    </a-assets>
+
+    <a-entity obj-model="obj: #abs-obj; mtl: #abs-mtl"></a-entity>
+
+    <!-- Rua Tenente Anastácio de Moura -->
       <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
