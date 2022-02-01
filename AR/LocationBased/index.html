@@ -15,41 +15,59 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
+
+    <!-- Define asseds -->
     <a-assets>
       <a-asset-item id="abs-obj" src="assets/AbstractoLogo.gltf"></a-asset-item>
     </a-assets>
 
+    <!-- 3D models -->
     <!-- JP -->
       <!-- Tokyu Hiyoshi Station Bicycle Parking -->
-      <a-entity gltf-model="#abs-obj"
+<!--       <a-entity gltf-model="#abs-obj"
         scale="10 10 10"
         gps-entity-place="latitude: 35.552525; longitude: 139.646311;"></a-entity> 
 
-      <!-- Mraeclo -->
+      Mraeclo
       <a-entity gltf-model="#abs-obj"
         scale="10 10 10"
-        gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"></a-entity>  
+        gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"></a-entity>   -->
 
     <!-- Rua Tenente Anastácio de Moura -->
       <a-entity gltf-model="#abs-obj"
         scale="10 10 10"
         gps-entity-place="latitude: -19.927249; longitude: -43.917302;"></a-entity>
 
-  <!--     <a-text
-        value="BH"
+    <!-- Text -->
+      <a-text
+        value="My first text"
         look-at="[gps-camera]"
-        scale="120 120 120"
+        scale="25 25 25"
+        position="0 20 0"
+        animation="property: position; to: 0 25 0; dur: 5000; dir:alternate; easing: easeInOutSine; loop: true"
         gps-entity-place="latitude: -19.927249; longitude: -43.917302;"
-      ></a-text> -->
+      ></a-text>
 
-      <a-camera gps-camera="minDistance: 5; maxDistance: 500; gpsMinDistance: 5; gpsTimeInterval:1000"
+      <!-- Create AR camera -->
+      <!-- Ref: https://ar-js-org.github.io/AR.js-Docs/location-based/#custom-attributes -->
+      <a-camera gps-camera="minDistance: 5; maxDistance: 500; gpsMinDistance: 1; gpsTimeInterval:1000
+                            gpsMinDistance: 5; gpsTimeInterval:1000;
+                            <!-- simulateLatitude: -19.927249; simulateLongitude: -43.917401 -->"
                 rotation-reader
+                vertical-controls wasd-controls="acceleration: 1300"
                 look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'
+
       ></a-camera>
     </a-scene>
       <script type="text/javascript">
-        // const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+        // const distanceMsg = document.querySelector('#abs-obj').getAttribute('distanceMsg');
         // console.log("distanceMsg "+distanceMsg);   // "890 meters"
+
+        setInterval(function getDist() {
+          let distanceMsg =  document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+          document.querySelector("a-text").setAttribute('value',distanceMsg)
+        }, 500)// every 2000 ms
+
       </script>
   </body>
 </html>
