@@ -33,10 +33,10 @@
         scale="10 10 10"
         gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"></a-entity>   -->
 
-    <!-- Rua Tenente Anastácio de Moura -->
+    <!-- Praça Floriano Peixoto - -19.923553737437548, -43.91956937896397 -->
       <a-entity gltf-model="#abs-obj"
         scale="10 10 10"
-        gps-entity-place="latitude: -19.927249; longitude: -43.917302;"></a-entity>
+        gps-entity-place="latitude: -19.923553737437548; longitude: -43.91956937896397;"></a-entity>
 
     <!-- Text -->
       <a-text
@@ -44,16 +44,14 @@
         look-at="[gps-camera]"
         scale="25 25 25"
         position="0 5 0"
-        gps-entity-place="latitude: -19.927249; longitude: -43.917302;"
+        gps-entity-place="latitude: -19.923553737437548; longitude: -43.91956937896397;"
       ></a-text>
 
       <!-- Create AR camera -->
       <!-- Ref: https://ar-js-org.github.io/AR.js-Docs/location-based/#custom-attributes -->
-      <a-camera gps-camera="minDistance: 0; maxDistance: 500; gpsMinDistance: 1; gpsTimeInterval:1000"
+      <a-camera gps-camera="minDistance: 2; maxDistance: 500; gpsMinDistance: 1; gpsTimeInterval:1000"
                 rotation-reader
-                vertical-controls wasd-controls="acceleration: 1300"
                 look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'
-
       ></a-camera>
     </a-scene>
       <script type="text/javascript">
