@@ -16,13 +16,15 @@
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
     <a-assets>
-      <a-asset-item id="abs-obj" src="assets/AbstractoLogo.obj"></a-asset-item>
-      <img id="abs-mtl" src="assets/AbstractoLogo-Material.png">
+      <a-asset-item id="abs-obj" src="assets/AbstractoLogo.gltf"></a-asset-item>
     </a-assets>
 
-    <a-entity obj-model="obj: #abs-obj; mtl: #abs-mtl"></a-entity>
 
     <!-- Rua Tenente Anastácio de Moura -->
+      <a-entity gltf-model="#abs-obj"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: -19.927249; longitude: -43.917302;"></a-entity>
       <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
