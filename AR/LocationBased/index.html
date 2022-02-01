@@ -42,7 +42,14 @@
         gps-entity-place="latitude: -19.927249; longitude: -43.917302;"
       ></a-text> -->
 
-      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-camera gps-camera="minDistance: 5; maxDistance: 500; gpsMinDistance: 5; gpsTimeInterval:1000"
+                rotation-reader
+                look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'
+      ></a-camera>
     </a-scene>
+      <script type="text/javascript">
+        // const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+        // console.log("distanceMsg "+distanceMsg);   // "890 meters"
+      </script>
   </body>
 </html>
