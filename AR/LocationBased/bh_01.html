@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Abstracto - GeoAR.js demo</title>
+    <title>bh_01 - GeoAR.js demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -22,45 +22,18 @@
     </a-assets>
 
     <!-- 3D models -->
-    <!-- JP -->
-      <!-- Tokyu Hiyoshi Station Bicycle Parking -->
-      <a-entity gltf-model="#abs-obj"
-        scale="10 10 10"
-        gps-entity-place="latitude: 35.552525; longitude: 139.646311;"></a-entity> 
-
-      <!-- Mraeclo -->
-      <a-entity gltf-model="#abs-obj"
-        scale="10 10 10"
-        gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"></a-entity>  
-
-      <a-text
-        id="dynamicText"
-        value="My first text"
-        look-at="[gps-camera]"
-        scale="25 25 25"
-        position="0 5 0"
-        gps-entity-place="latitude: 35.552525; longitude: 139.646311;"
-      ></a-text>
-
-      <a-text
-        value="Point B"
-        look-at="[gps-camera]"
-        scale="25 25 25"
-        position="0 5 0"
-        gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"
-      ></a-text>
-
+ 
     <!-- Praça Floriano Peixoto - 
       Point A = -19.9225430276961,   -43.92007665864725
       Point B = -19.92362447033543, -43.91953535095702 -->
-     <!--  <a-entity 
+      <a-entity 
         id="abstractoModel"
         gltf-model="#abs-obj"
         scale="10 10 10"
         gps-entity-place="latitude: -19.92362447033543; longitude: -43.91953535095702;"></a-entity>
- -->
+
     <!-- Text -->
- <!--      <a-text
+      <a-text
         id="dynamicText"
         value="My first text"
         look-at="[gps-camera]"
@@ -75,7 +48,7 @@
         scale="25 25 25"
         position="0 5 0"
         gps-entity-place="latitude: -19.923553737437548; longitude: -43.91956937896397;"
-      ></a-text> -->
+      ></a-text>
 
       <!-- Create AR camera -->
       <!-- Ref: https://ar-js-org.github.io/AR.js-Docs/location-based/#custom-attributes -->
