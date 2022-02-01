@@ -19,18 +19,28 @@
       <a-asset-item id="abs-obj" src="assets/AbstractoLogo.gltf"></a-asset-item>
     </a-assets>
 
+    <!-- JP -->
+      <!-- Tokyu Hiyoshi Station Bicycle Parking -->
+      <a-entity gltf-model="#abs-obj"
+        scale="10 10 10"
+        gps-entity-place="latitude: 35.552525; longitude: 139.646311;"></a-entity> 
+
+      <!-- Mraeclo -->
+      <a-entity gltf-model="#abs-obj"
+        scale="10 10 10"
+        gps-entity-place="latitude: 35.63263435794338; longitude: 139.6593538132099;"></a-entity>  
 
     <!-- Rua Tenente Anastácio de Moura -->
       <a-entity gltf-model="#abs-obj"
         scale="10 10 10"
         gps-entity-place="latitude: -19.927249; longitude: -43.917302;"></a-entity>
-        
-      <a-text
+
+  <!--     <a-text
         value="BH"
         look-at="[gps-camera]"
         scale="120 120 120"
         gps-entity-place="latitude: -19.927249; longitude: -43.917302;"
-      ></a-text>
+      ></a-text> -->
 
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
