@@ -56,10 +56,12 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/ExampleAssets/Scripts/AnchorCreator.cs" />
-    <Compile Include="Assets/ExampleAssets/Scripts/ARFeatheredPlaneMeshVisualizer.cs" />
-    <Compile Include="Assets/Scripts/PlaceOnPlane.cs" />
     <Compile Include="Assets/VIsual Object/Scripts/PlacementIndicator.cs" />
+    <Compile Include="Assets/ExampleAssets/Scripts/AnchorCreator.cs" />
+    <Compile Include="Assets/Scripts/PlaceOnPlane.cs" />
+    <Compile Include="Assets/ExampleAssets/Scripts/ARFeatheredPlaneMeshVisualizer.cs" />
+    <Compile Include="Assets/Scripts/PlaceOnPlane_Click.cs" />
+    <Compile Include="Assets/Scripts/PlaceOnPlane_Automatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/ExampleAssets/Shaders/FeatheredPlaneShader.shader" />

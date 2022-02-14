@@ -18,23 +18,23 @@ UnityEvent placementUpdate;
 
 [SerializeField]
 GameObject visualObject;
+public bool automaticallyPlace;
+Vector2 screenCoordinatesToAutoPlace;
 
-/// The prefab to instantiate on touch.
+/// The prefab to instantiate
 public GameObject placedPrefab{
         get { return m_PlacedPrefab; }
         set { m_PlacedPrefab = value; }
-    }
+}
 
 /// The object instantiated as a result of a successful raycast intersection with a plane.
 public GameObject spawnedObject { get; private set; }
 
 void Awake(){
+    screenCoordinatesToAutoPlace = new Vector2(Screen.width / 2, Screen.height / 2);
     m_RaycastManager = GetComponent<ARRaycastManager>();
-
-    if (placementUpdate == null)
-        placementUpdate = new UnityEvent();
-
-        placementUpdate.AddListener(DiableVisual);
+    if (placementUpdate == null) placementUpdate = new UnityEvent();
+    placementUpdate.AddListener(DiableVisual);
 }
 
 bool TryGetTouchPosition(out Vector2 touchPosition){
@@ -48,14 +48,22 @@ bool TryGetTouchPosition(out Vector2 touchPosition){
 }
 
 void Update(){
-    if (!TryGetTouchPosition(out Vector2 touchPosition)) return;
-    // Raycast hits are sorted by distance, so the first one will be the closest hit.
-    if (m_RaycastManager.Raycast(touchPosition, s_Hits, TrackableType.PlaneWithinPolygon)){
-        
-    var hitPose = s_Hits[0].pose;
-    if (spawnedObject == null) spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-    else   spawnedObject.transform.position = hitPose.position; //repositioning of the object 
-    placementUpdate.Invoke();
+    // places prefab automatically if there is a plane on screenCoordinatesToAutoPlace usint raycast
+    if (automaticallyPlace){
+        if (spawnedObject == null && m_RaycastManager.Raycast(screenCoordinatesToAutoPlace, s_Hits, TrackableType.PlaneWithinPolygon)) { 
+            var hitPose = s_Hits[0].pose;
+            spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+            placementUpdate.Invoke();
+        }   
+    } else { 
+        if (!TryGetTouchPosition(out Vector2 touchPosition)) return;
+        // Raycast hits are sorted by distance, so the first one will be the closest hit.
+        if (m_RaycastManager.Raycast(touchPosition, s_Hits, TrackableType.PlaneWithinPolygon)){  
+            var hitPose = s_Hits[0].pose;
+            if (spawnedObject == null) spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+            else                       spawnedObject.transform.position = hitPose.position; //repositioning of the object 
+        placementUpdate.Invoke();
+        }
     }
 }
 

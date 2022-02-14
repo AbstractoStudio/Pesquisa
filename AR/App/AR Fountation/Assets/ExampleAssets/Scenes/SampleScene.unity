@@ -369,6 +369,7 @@ MonoBehaviour:
     type: 3}
   visualObject: {fileID: 8297056788253150765, guid: 98c57c60d5f37d34cb0d009317bd15af,
     type: 3}
+  automaticallyPlace: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
