@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{2CB32BCF-9453-1368-FCEF-74053CBAAC3B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlaceOnPlane_Automatic.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlaceOnPlane.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="33" Column="34" />
+      <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="61" Column="82" />
       <File FileName="Assets/Scripts/PlaceOnPlane_Click.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/PlaceOnPlane_Automatic.cs" Line="12" Column="36" />
+      <File FileName="Assets/Scripts/PlaceOnPlane_Automatic.cs" Line="22" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +11,7 @@
           <Node name="AR Fountation" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlaceOnPlane_Automatic.cs" selected="True" />
+                <Node name="PlaceOnPlane.cs" selected="True" />
               </Node>
             </Node>
           </Node>
