@@ -1,15 +1,23 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{2CB32BCF-9453-1368-FCEF-74053CBAAC3B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlaceOnPlane.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="17" Column="28" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AR Fountation" expanded="True" selected="True" />
+          <Node name="AR Fountation" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a485d5b2-a6f0-475f-8b99-0366dde7b2e1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

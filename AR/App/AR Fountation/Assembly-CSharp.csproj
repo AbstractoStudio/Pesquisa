@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets/ExampleAssets/Scripts/AnchorCreator.cs" />
     <Compile Include="Assets/ExampleAssets/Scripts/ARFeatheredPlaneMeshVisualizer.cs" />
+    <Compile Include="Assets/Scripts/PlaceOnPlane.cs" />
+    <Compile Include="Assets/VIsual Object/Scripts/PlacementIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/ExampleAssets/Shaders/FeatheredPlaneShader.shader" />
