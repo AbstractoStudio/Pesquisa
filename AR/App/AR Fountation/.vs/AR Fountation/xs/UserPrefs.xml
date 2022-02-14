@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{2CB32BCF-9453-1368-FCEF-74053CBAAC3B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlaceOnPlane.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GPS.cs">
     <Files>
+      <File FileName="Assets/Scripts/GPS.cs" Line="15" Column="35" />
       <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="61" Column="82" />
-      <File FileName="Assets/Scripts/PlaceOnPlane_Click.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/PlaceOnPlane_Automatic.cs" Line="22" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +10,7 @@
           <Node name="AR Fountation" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlaceOnPlane.cs" selected="True" />
+                <Node name="GPS.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a5eacb7-3785-4013-9ad2-eae2636ae498" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e9b98f0a-8558-4cb2-b982-a89552cfbb5d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
