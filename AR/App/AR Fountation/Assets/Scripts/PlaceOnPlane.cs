@@ -17,6 +17,7 @@ public class PlaceOnPlane : MonoBehaviour{
 UnityEvent placementUpdate;
 
 [SerializeField]
+GameObject GPS;
 GameObject visualObject;
 public bool automaticallyPlace;
 Vector2 screenCoordinatesToAutoPlace;
@@ -42,15 +43,16 @@ bool TryGetTouchPosition(out Vector2 touchPosition){
         touchPosition = Input.GetTouch(0).position;
         return true;
     }
-
     touchPosition = default;
     return false;
 }
 
 void Update(){
-    // places prefab automatically if there is a plane on screenCoordinatesToAutoPlace usint raycast
+    // places prefab automatically if person is on the target location and there is a plane on screenCoordinatesToAutoPlace using raycast
     if (automaticallyPlace){
-        if (spawnedObject == null && m_RaycastManager.Raycast(screenCoordinatesToAutoPlace, s_Hits, TrackableType.PlaneWithinPolygon)) { 
+        if (spawnedObject == null && GPS.GetComponent<GPS>().distance < 0.1f &&
+            m_RaycastManager.Raycast(screenCoordinatesToAutoPlace, s_Hits, TrackableType.PlaneWithinPolygon))
+        { 
             var hitPose = s_Hits[0].pose;
             spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
             placementUpdate.Invoke();
