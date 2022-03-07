@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlaceOnPlane.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GPS.cs">
     <Files>
-      <File FileName="Assets/Scripts/GPS.cs" Line="69" Column="108" />
-      <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="20" Column="16" />
+      <File FileName="Assets/Scripts/GPS.cs" Line="26" Column="52" />
+      <File FileName="Assets/Scripts/PlaceOnPlane.cs" Line="32" Column="109" />
+      <File FileName="Assets/Scripts/GameEvents.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +12,7 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="PlaceOnPlane.cs" selected="True" />
+                  <Node name="GPS.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -22,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3dd016b8-a7c6-45ab-abd3-2c0e734fbc66" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2edc8f7a-d0ad-482a-afeb-5b6cfaf0b28c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
