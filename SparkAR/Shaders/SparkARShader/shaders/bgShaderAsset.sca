@@ -106,7 +106,7 @@ vec4 main(vec4 color1, vec4 color2, float armCount) {
 
   st*=vec2(9.,16.);
 
-  vec3 lightGreen= vec3(0.7, 0.82, 0.47);
+  vec3 lightGreen= color1.xyz; //vec3(0.7, 0.82, 0.47)
   vec3 mediumGreen = vec3(0.45, 0.68, 0.36);
   vec3 darkGreen = vec3(0.13,0.23,0.16);
 
