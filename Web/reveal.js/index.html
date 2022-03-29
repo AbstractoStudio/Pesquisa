@@ -8,25 +8,85 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/beige.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 		<style type="text/css">
 			.make-it-pop {
-				filter:  drop-shadow(0 0 10px purple);
+				filter:  drop-shadow(0 0 10px white);
 			}
 		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Horizontal Slide 1</section>
+				<!-- BASIC SLIDES -->
+				<section>First Slide</section>
 				<section>
-					<section data-state="make-it-pop">Slide 2 (Vertical)</section>
+					<section data-state="make-it-pop">Title with Style</section>
 					<section>Vertical Slide 2</section>
 				</section>
-				<section>Slide 3</section>
+				<section data-markdown data-separator-vertical="^\n\n">
+					<textarea data-template>
+						# Slides with Markdown
+						This uses markdown for formatting. Even [links](http://www.abstracto.com.br) work!
+						---
+						## Horizontal md Slide 2 
+						---
+						## Horizontal md Slide 3
+					</textarea>
+				</section>
+
+				<!-- COLORED BACKGROUNDS -->
+				<section>
+					<section data-background-color="teal">
+						Colored Backgrounds
+					</section>
+					<section data-background-color="#ffd700">
+						<h1>🔣</h1>
+					</section>
+					<section data-background-color="rgb(30,144,255)">
+						<h1>✨</h1>
+					</section>
+				</section>
+
+				<!-- IMAGE BACKGROUNDS -->
+				<section>
+					<section data-background-image="https://images.unsplash.com/photo-1576341592370-3151269da47e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+							 data-background-position="top"
+							 data-markdown>
+						## Image Backgrounds
+					</section>
+
+					<section data-background-image="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+							 data-background-position="top"
+							 data-markdown>
+						smooth transitions
+					</section>
+
+					<section data-background-image="https://cdn.pixabay.com/photo/2016/12/24/23/50/pattern-1929506_960_720.png"
+							 
+							 data-background-size="64px"
+							 data-background-repeat="repeat">
+						tile images
+					</section>
+				</section>
+
+				<!-- VIDEO BACKGROUNDS -->
+				<section>
+					<section data-background-video="media/A_Brief_History_of_Robotics.mp4"
+							 data-background-size="contai"n>
+						
+					</section>
+					<section>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Uzf-K7UtD78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section data-background-iframe="https://www.youtube.com/embed/Uzf-K7UtD78"
+							data-background-interactive>
+						
+					</section>
+				</section>
 			</div>
 		</div>
 
